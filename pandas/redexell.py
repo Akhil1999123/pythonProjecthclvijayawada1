@@ -1,0 +1,10 @@
+import pandas as pd
+exldata1=pd.read_excel('..//dataset//Book1.xlsx')
+print(exldata1)
+exldata2=pd.read_excel('..//dataset//Book2.xlsx')
+print(exldata2)
+exldata3=pd.concat([exldata1,exldata2],axis=1,join='inner')
+#print(exldata3)
+exldat4=pd.merge(left=exldata1,right=exldata2,how='inner')
+#print(exldat4)
+print(exldata1.compare(exldata2))
